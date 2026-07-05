@@ -34,7 +34,7 @@ response = client.models.generate_content(
 )
 gemini = json.loads(response.text)
 if gemini["use_tool"] == True:
-    print(f"tool used---{gemini["tool_name"]}")
+    print(f"tool used---{gemini['tool_name']}")
     if gemini["tool_name"] == "browser":
         query = gemini["query"]
         print(query)
